@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sheet page</title>
+      <style>
+body {
+  background-image: url("../static/img/image2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the heading */
+h1 {
+  color: #333333;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Style the form */
+form {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* Style the labels */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the textboxes */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+</style>
+  </head>
+  <body>
+    <h1>Sheet Names</h1>
+    <form method="post" action="{{ url_for('sheets') }}">
+      <label for="hallticket">Hall Ticket Sheet name:</label>
+      <input type="text" id="hallticket" name="hallticket"><br><br>
+      <label for="hall">Hall sheet name:</label>
+      <input type="text" id="hall" name="hall"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
